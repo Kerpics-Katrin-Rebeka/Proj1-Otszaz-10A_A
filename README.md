@@ -4,5 +4,5 @@ Feladat: http://informatika.fazekas.hu/wp-content/uploads/2015/10/e_prog_2016_ma
 Txt.file: http://informatika.fazekas.hu/wp-content/uploads/2015/10/penztar.txt
 
 Csapattagok: 
-- Kerpics Katrin
-- Hajba Bálint
+* Kerpics Katrin
+* Hajba Bálint
