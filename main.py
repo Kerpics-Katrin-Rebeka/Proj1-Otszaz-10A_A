@@ -1,3 +1,6 @@
+from otszaz import Otszaz
+
+
 def main() -> None:
     otszaz: list[Otszaz] = []
     with open('penztar.txt', 'r', encoding='utf-8') as file:
