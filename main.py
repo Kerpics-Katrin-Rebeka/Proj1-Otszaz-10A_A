@@ -10,8 +10,9 @@ def main() -> None:
 
     print('4. task')
     order_input: int = int(input('Enter an order number! '))
-    item_input: int = int(input('Enter the name of an item! '))
+    item_input: str = str(input('Enter the name of an item! '))
     number_input: int = int(input('Enter the number of purchases! '))
+
 
 if __name__ == "__main__":
     main()
