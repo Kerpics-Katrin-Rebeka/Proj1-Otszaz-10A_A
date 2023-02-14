@@ -2,10 +2,9 @@ from otszaz import Otszaz
 
 
 def main() -> None:
-    otszaz: list[Otszaz] = []
-    with open('penztar.txt', 'r', encoding='utf-8') as file:
-        for sor in file.read().splitlines():
-            otszaz.append(Otszaz(sor))
+    otszaz: Otszaz = Otszaz('penztar.txt')
+
+    print(otszaz.items)
 
 
 if __name__ == "__main__":
