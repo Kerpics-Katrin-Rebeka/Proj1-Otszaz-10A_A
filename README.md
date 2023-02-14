@@ -9,6 +9,7 @@
 - Class: Changes made to otszaz.py. 
 - Main: Changes made to main.py.
 - README: Changes made to README.md.
+- Solution: Changes made to Solution.py.
 - Task: Required tasks.
 - New thing: Added new lines to said file.
 - Fix: Fixed lines in said file.
