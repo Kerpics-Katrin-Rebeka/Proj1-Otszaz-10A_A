@@ -40,5 +40,10 @@ def main() -> None:
     for item, amount in otszaz.items[order_input - 1].items():
         print(amount, item)
 
+    destination_file = open('sum.txt', 'w')
+    for i, otszaz.payments in enumerate(otszaz.items):
+        print(i + 1, ': ', sum(map(worth, otszaz.payments.values())), sep='', file=destination_file)
+
+
 if __name__ == "__main__":
     main()
