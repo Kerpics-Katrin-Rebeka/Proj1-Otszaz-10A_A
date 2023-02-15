@@ -1,12 +1,12 @@
-from otszaz import Otszaz
+from Purchases import Purchases
 
 
 def main() -> None:
-    otszaz: Otszaz = Otszaz('penztar.txt')
+    purchases: Purchases = Purchases('penztar.txt')
 
-    print(f'2. task: \nNumber of payments: {len(otszaz.items)}')
+    print(f'2. task: \nNumber of payments: {len(purchases.items)}')
 
-    print(f'\n3. task: \nThe first buyer purchased {len(otszaz.items[0])} item(s)')
+    print(f'\n3. task: \nThe first buyer purchased {len(purchases.items[0])} item(s)')
 
     print('\n4. task')
     order_input: int = int(input('Enter an order number! '))
@@ -15,8 +15,8 @@ def main() -> None:
 
     print('\n5. task')
     was_bought: list[int] = []
-    for i, otszaz.payments in enumerate(otszaz.items):
-        if item_input in otszaz.payments:
+    for i, purchases.payments in enumerate(purchases.items):
+        if item_input in purchases.payments:
             was_bought.append(i + 1)
 
     print(f'The number of the first purchase: {min(was_bought)}')
@@ -37,12 +37,12 @@ def main() -> None:
     print(f'You need to pay {worth(number_input)}Ft for {number_input} piece(s) of items.')
 
     print('\n7. feladat')
-    for item, amount in otszaz.items[order_input - 1].items():
+    for item, amount in purchases.items[order_input - 1].items():
         print(amount, item)
 
     destination_file = open('sum.txt', 'w')
-    for i, otszaz.payments in enumerate(otszaz.items):
-        print(i + 1, ': ', sum(map(worth, otszaz.payments.values())), sep='', file=destination_file)
+    for i, purchases.payments in enumerate(purchases.items):
+        print(i + 1, ': ', sum(map(worth, purchases.payments.values())), sep='', file=destination_file)
 
 
 if __name__ == "__main__":
