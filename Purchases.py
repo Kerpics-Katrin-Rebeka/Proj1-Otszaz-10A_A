@@ -1,4 +1,4 @@
-class Otszaz():
+class Purchases():
     items: list[str] = []
     payments: dict[str, int] = {}
 
