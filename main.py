@@ -23,7 +23,7 @@ def main() -> None:
     print(sol.print_twb(input_order))
 
     print('\n8.feladat')
-    sol.create_file()
+    sol.file_writing()
 
 
 if __name__ == "__main__":
