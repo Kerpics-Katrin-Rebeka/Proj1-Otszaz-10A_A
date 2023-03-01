@@ -55,7 +55,7 @@ class Solution:
         for key, value in self.this_was_bought(input_order).items():
             print(key, value)
 
-    def file_writing(self):
+    def file_writing(self) -> None:
         destination_file = open('osszeg.txt', 'w', encoding='utf-8')
         for i, self._purchases[0] in enumerate(self._purchases):
             print(i + 1, ': ', sum(map(self.money_needed, self._purchases[i].things.values())), sep='', file=destination_file)
