@@ -53,7 +53,7 @@ class Solution:
 
     def print_twb(self, input_order: int) -> None:
         for key, value in self._this_was_bought(input_order).items():
-            print(key, value)
+            print(value, key)
 
     def file_writing(self) -> None:
         destination_file = open('osszeg.txt', 'w', encoding='utf-8')
