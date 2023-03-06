@@ -22,7 +22,7 @@ class Solution:
     def items_bought(self, number_of_purchase: int) -> int:
         return self._purchases[number_of_purchase - 1].num_of_items
 
-    def was_bought(self, item_input: str) -> list[int]:
+    def _was_bought(self, item_input: str) -> list[int]:
         was_bought: list[int] = []
         for i, self._purchases[0] in enumerate(self._purchases):
             if item_input in self._purchases[i].things:
@@ -30,13 +30,13 @@ class Solution:
         return was_bought
 
     def min_was_bought(self, item_input: str) -> int:
-        return min(self.was_bought(item_input))
+        return min(self._was_bought(item_input))
 
     def max_was_bought(self, item_input: str) -> int:
-        return max(self.was_bought(item_input))
+        return max(self._was_bought(item_input))
 
     def total_was_bought(self, item_input: str) -> int:
-        return len(self.was_bought(item_input))
+        return len(self._was_bought(item_input))
 
     def money_needed(self, input_number: int) -> int:
         if input_number == 0:
@@ -48,12 +48,12 @@ class Solution:
         else:
             return (input_number - 2) * 400 + 950
 
-    def this_was_bought(self, input_order: int) -> dict[str, int]:
+    def _this_was_bought(self, input_order: int) -> dict[str, int]:
         return self._purchases[input_order - 1].things
 
     def print_twb(self, input_order: int) -> None:
-        for key, value in self.this_was_bought(input_order).items():
-            print(key, value)
+        for key, value in self._this_was_bought(input_order).items():
+            print(value, key)
 
     def file_writing(self) -> None:
         destination_file = open('osszeg.txt', 'w', encoding='utf-8')
